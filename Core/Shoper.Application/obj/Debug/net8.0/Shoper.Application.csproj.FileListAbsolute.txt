@@ -1,0 +1,15 @@
+/home/nazar/Desktop/RiderProjects/Shoper/Core/Shoper.Application/bin/Debug/net8.0/Shoper.Application.deps.json
+/home/nazar/Desktop/RiderProjects/Shoper/Core/Shoper.Application/bin/Debug/net8.0/Shoper.Application.dll
+/home/nazar/Desktop/RiderProjects/Shoper/Core/Shoper.Application/bin/Debug/net8.0/Shoper.Application.pdb
+/home/nazar/Desktop/RiderProjects/Shoper/Core/Shoper.Application/bin/Debug/net8.0/Shoper.Domain.dll
+/home/nazar/Desktop/RiderProjects/Shoper/Core/Shoper.Application/bin/Debug/net8.0/Shoper.Domain.pdb
+/home/nazar/Desktop/RiderProjects/Shoper/Core/Shoper.Application/obj/Debug/net8.0/Shoper.Application.csproj.AssemblyReference.cache
+/home/nazar/Desktop/RiderProjects/Shoper/Core/Shoper.Application/obj/Debug/net8.0/Shoper.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/nazar/Desktop/RiderProjects/Shoper/Core/Shoper.Application/obj/Debug/net8.0/Shoper.Application.AssemblyInfoInputs.cache
+/home/nazar/Desktop/RiderProjects/Shoper/Core/Shoper.Application/obj/Debug/net8.0/Shoper.Application.AssemblyInfo.cs
+/home/nazar/Desktop/RiderProjects/Shoper/Core/Shoper.Application/obj/Debug/net8.0/Shoper.Application.csproj.CoreCompileInputs.cache
+/home/nazar/Desktop/RiderProjects/Shoper/Core/Shoper.Application/obj/Debug/net8.0/Shoper.Application.csproj.CopyComplete
+/home/nazar/Desktop/RiderProjects/Shoper/Core/Shoper.Application/obj/Debug/net8.0/Shoper.Application.dll
+/home/nazar/Desktop/RiderProjects/Shoper/Core/Shoper.Application/obj/Debug/net8.0/refint/Shoper.Application.dll
+/home/nazar/Desktop/RiderProjects/Shoper/Core/Shoper.Application/obj/Debug/net8.0/Shoper.Application.pdb
+/home/nazar/Desktop/RiderProjects/Shoper/Core/Shoper.Application/obj/Debug/net8.0/ref/Shoper.Application.dll

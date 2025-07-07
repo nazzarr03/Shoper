@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{A820FBD7-8BCC-4AAE-82CC-53FBFCAABD45}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrasturucture", "Infrasturucture", "{F4EC269B-D2B0-423A-BDFB-8C321A251A41}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{899732D1-492E-4E42-84B2-A02D28C9CD18}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{A74BD2EE-8493-4406-B1C6-869EB9A40A8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shoper.Application", "Core\Shoper.Application\Shoper.Application.csproj", "{C8796D57-1E60-452B-B3DB-9963E5EE56A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shoper.Domain", "Core\Shoper.Domain\Shoper.Domain.csproj", "{AB51F049-8195-4863-9DD6-E2F22B2406BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shoper.Persistence", "Infrasturucture\Shoper.Persistence\Shoper.Persistence.csproj", "{325760BC-DF5F-4453-94A6-BA4339EFE4E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shoper.WebApi", "Presentation\Shoper.WebApi\Shoper.WebApi.csproj", "{C97AA57B-0602-462E-AE31-7B1F3707D39F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C8796D57-1E60-452B-B3DB-9963E5EE56A7} = {A820FBD7-8BCC-4AAE-82CC-53FBFCAABD45}
+		{AB51F049-8195-4863-9DD6-E2F22B2406BA} = {A820FBD7-8BCC-4AAE-82CC-53FBFCAABD45}
+		{325760BC-DF5F-4453-94A6-BA4339EFE4E5} = {F4EC269B-D2B0-423A-BDFB-8C321A251A41}
+		{C97AA57B-0602-462E-AE31-7B1F3707D39F} = {899732D1-492E-4E42-84B2-A02D28C9CD18}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8796D57-1E60-452B-B3DB-9963E5EE56A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8796D57-1E60-452B-B3DB-9963E5EE56A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8796D57-1E60-452B-B3DB-9963E5EE56A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8796D57-1E60-452B-B3DB-9963E5EE56A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB51F049-8195-4863-9DD6-E2F22B2406BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB51F049-8195-4863-9DD6-E2F22B2406BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB51F049-8195-4863-9DD6-E2F22B2406BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB51F049-8195-4863-9DD6-E2F22B2406BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{325760BC-DF5F-4453-94A6-BA4339EFE4E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{325760BC-DF5F-4453-94A6-BA4339EFE4E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{325760BC-DF5F-4453-94A6-BA4339EFE4E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{325760BC-DF5F-4453-94A6-BA4339EFE4E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C97AA57B-0602-462E-AE31-7B1F3707D39F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C97AA57B-0602-462E-AE31-7B1F3707D39F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C97AA57B-0602-462E-AE31-7B1F3707D39F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C97AA57B-0602-462E-AE31-7B1F3707D39F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

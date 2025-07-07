@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "n6xtLZhnrR6QTD6FNdOiwQf/nNCOYeRWCO6R1ZCUGvI=",
+  "Source": "Shoper.WebApi",
+  "BasePath": "_content/Shoper.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
