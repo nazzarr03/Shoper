@@ -2,7 +2,7 @@ using Shoper.Application.Dtos.CustomerDtos;
 
 namespace Shoper.Application.Usecasess.CustomerServices;
 
-public interface ICustomerServices
+public interface ICustomerService
 {
     Task<List<ResultCustomerDto>> GetAllCustomerAsync();
     Task<GetByIdCustomerDto> GetByIdCustomerAsync(int id);

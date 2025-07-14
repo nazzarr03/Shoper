@@ -12,35 +12,12 @@ public class AppDbContext : DbContext
     public DbSet<Customer> Customers { get; set; }
     public DbSet<Order> Orders { get; set; }
     public DbSet<OrderItem> OrderItems { get; set; }
-
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        base.OnModelCreating(modelBuilder);
-        
-        modelBuilder.Entity<Category>()
-            .HasMany(c => c.Products)
-            .WithOne(p => p.Category)
-            .HasForeignKey(p => p.CategoryId);
-        
-        modelBuilder.Entity<Product>()
-            .HasOne(p => p.Category)
-            .WithMany(c => c.Products)
-            .HasForeignKey(p => p.CategoryId);
-        
-        modelBuilder.Entity<Customer>()
-            .HasMany(c => c.Orders)
-            .WithOne(c => c.Customer)
-            .HasForeignKey(c => c.CustomerId);
-        
-        modelBuilder.Entity<Order>()
-            .HasMany(o => o.OrderItems)
-            .WithOne(o => o.Order)
-            .HasForeignKey(o => o.OrderId);
-        
-        modelBuilder.Entity<OrderItem>()
-            .HasOne(o => o.Order)
-            .WithMany(o => o.OrderItems)
-            .HasForeignKey(o => o.OrderId);
-        
-    }
+    public DbSet<Cart> Carts { get; set; }
+    public DbSet<CartItem> CartItems { get; set; }
+    public DbSet<City> City { get; set; }
+    public DbSet<Town> Town { get; set; }
+    public DbSet<Subscriber> Subscribers { get; set; }
+    public DbSet<Help> Helps { get; set; }
+    public DbSet<Contact> Contacts { get; set; }
+    public DbSet<Favorites> Favorites { get; set; }
 }

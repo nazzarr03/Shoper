@@ -9,3 +9,4 @@
 /home/nazar/Desktop/RiderProjects/Shoper/Core/Shoper.Domain/obj/Debug/net8.0/refint/Shoper.Domain.dll
 /home/nazar/Desktop/RiderProjects/Shoper/Core/Shoper.Domain/obj/Debug/net8.0/Shoper.Domain.pdb
 /home/nazar/Desktop/RiderProjects/Shoper/Core/Shoper.Domain/obj/Debug/net8.0/ref/Shoper.Domain.dll
+/home/nazar/Desktop/RiderProjects/Shoper/Core/Shoper.Domain/obj/Debug/net8.0/Shoper.Domain.sourcelink.json

@@ -1,3 +1,5 @@
+using System.Linq.Expressions;
+
 namespace Shoper.Application.Interfaces;
 
 public interface IRepository<T> where T : class
@@ -20,4 +22,13 @@ public interface IRepository<T> where T : class
     
     // T nesnesini siler
     Task DeleteAsync(T entity);
+    
+    Task<T> GetByFilterAsync(Expression<Func<T, bool>> filter);
+    
+    Task<List<T>> GetTakeAsync(int sayi);
+    
+    Task<T> FirstOrDefaultAsync(Expression<Func<T, bool>> filter);
+    
+    Task<List<T>> WhereAsync(Expression<Func<T, bool>> filter);
+
 }

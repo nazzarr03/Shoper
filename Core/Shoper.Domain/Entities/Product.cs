@@ -9,5 +9,5 @@ public class Product
     public int Stock { get; set; }
     public string ImageUrl { get; set; }
     public int CategoryId { get; set; }
-    public Category Category { get; set; }
+    //public Category Category { get; set; }
 }

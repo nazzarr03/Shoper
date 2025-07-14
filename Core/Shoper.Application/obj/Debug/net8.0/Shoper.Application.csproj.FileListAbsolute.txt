@@ -13,3 +13,4 @@
 /home/nazar/Desktop/RiderProjects/Shoper/Core/Shoper.Application/obj/Debug/net8.0/refint/Shoper.Application.dll
 /home/nazar/Desktop/RiderProjects/Shoper/Core/Shoper.Application/obj/Debug/net8.0/Shoper.Application.pdb
 /home/nazar/Desktop/RiderProjects/Shoper/Core/Shoper.Application/obj/Debug/net8.0/ref/Shoper.Application.dll
+/home/nazar/Desktop/RiderProjects/Shoper/Core/Shoper.Application/obj/Debug/net8.0/Shoper.Application.sourcelink.json

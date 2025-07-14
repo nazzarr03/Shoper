@@ -17,3 +17,4 @@
 /home/nazar/Desktop/RiderProjects/Shoper/Infrasturucture/Shoper.Persistence/obj/Debug/net8.0/Shoper.Persistence.pdb
 /home/nazar/Desktop/RiderProjects/Shoper/Infrasturucture/Shoper.Persistence/obj/Debug/net8.0/Shoper.Persistence.genruntimeconfig.cache
 /home/nazar/Desktop/RiderProjects/Shoper/Infrasturucture/Shoper.Persistence/obj/Debug/net8.0/ref/Shoper.Persistence.dll
+/home/nazar/Desktop/RiderProjects/Shoper/Infrasturucture/Shoper.Persistence/obj/Debug/net8.0/Shoper.Persistence.sourcelink.json

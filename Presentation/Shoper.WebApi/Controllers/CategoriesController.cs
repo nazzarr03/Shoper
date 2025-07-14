@@ -8,45 +8,45 @@ namespace Shoper.WebApi.Controllers;
 [ApiController]
 public class CategoriesController : ControllerBase
 {
-    private readonly ICategoryServices _categoryServices;
+    private readonly ICategoryService _categoryService;
 
-    public CategoriesController(ICategoryServices categoryServices)
+    public CategoriesController(ICategoryService categoryService)
     {
-        _categoryServices = categoryServices;
+        _categoryService = categoryService;
     }
 
     [HttpGet]
     public async Task<IActionResult> GetAllCategories()
     {
-        var categories = await _categoryServices.GetAllCategoriesAsync();
+        var categories = await _categoryService.GetAllCategoriesAsync();
         return Ok(categories);
     }
 
     [HttpGet("{id}")]
     public async Task<IActionResult> GetByIdCategory(int id)
     {
-        var category = await _categoryServices.GetByIdCategoryAsync(id);
+        var category = await _categoryService.GetByIdCategoryAsync(id);
         return Ok(category);
     }
 
     [HttpPost]
     public async Task<IActionResult> CreateCategory(CreateCategoryDto dto)
     {
-        await _categoryServices.CreateCategoryAsync(dto);
+        await _categoryService.CreateCategoryAsync(dto);
         return Ok("Category created");
     }
 
     [HttpPut]
     public async Task<IActionResult> UpdateCategory(UpdateCategoryDto dto)
     {
-        await _categoryServices.UpdateCategoryAsync(dto);
+        await _categoryService.UpdateCategoryAsync(dto);
         return Ok("Category updated");
     }
 
-    [HttpDelete("{id}")]
+    [HttpDelete]
     public async Task<IActionResult> DeleteCategory(int id)
     {
-        await _categoryServices.DeleteCategoryAsync(id);
+        await _categoryService.DeleteCategoryAsync(id);
         return Ok("Category deleted");
     }
 }

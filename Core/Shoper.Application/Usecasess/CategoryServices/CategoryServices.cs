@@ -4,7 +4,7 @@ using Shoper.Domain.Entities;
 
 namespace Shoper.Application.Usecasess.CategoryServices;
 
-public class CategoryServices : ICategoryServices
+public class CategoryServices : ICategoryService
 {
     private readonly IRepository<Category> _repository;
 
@@ -12,7 +12,7 @@ public class CategoryServices : ICategoryServices
     {
         _repository = repository;
     }
-
+    
     public async Task CreateCategoryAsync(CreateCategoryDto model)
     {
         await _repository.CreateAsync(new Category
@@ -20,7 +20,7 @@ public class CategoryServices : ICategoryServices
             CategoryName = model.CategoryName,
         });
     }
-
+    
     public async Task DeleteCategoryAsync(int id)
     {
         var category = await _repository.GetByIdAsync(id);
@@ -30,29 +30,28 @@ public class CategoryServices : ICategoryServices
     public async Task<List<ResultCategoryDto>> GetAllCategoriesAsync()
     {
         var categories = await _repository.GetAllAsync();
-        var result = categories.Select(x => new ResultCategoryDto
+        return categories.Select(c => new ResultCategoryDto
         {
-            CategoryId = x.CategoryId,
-            CategoryName = x.CategoryName
+            CategoryId = c.CategoryId,
+            CategoryName = c.CategoryName,
         }).ToList();
-        return result;
     }
 
     public async Task<GetByIdCategoryDto> GetByIdCategoryAsync(int id)
     {
-        var category = await _repository.GetByIdAsync(id);
-        var newCategory = new GetByIdCategoryDto
+        var findCategory = await _repository.GetByIdAsync(id);
+        var category = new GetByIdCategoryDto
         {
-            CategoryId = category.CategoryId,
-            CategoryName = category.CategoryName
+            CategoryId = findCategory.CategoryId,
+            CategoryName = findCategory.CategoryName,
         };
-        return newCategory;
+        return category;
     }
-
+    
     public async Task UpdateCategoryAsync(UpdateCategoryDto model)
     {
-        var category = await _repository.GetByIdAsync(model.CategoryId);
-        category.CategoryName = model.CategoryName;
-        await _repository.UpdateAsync(category);
+        var findCategory = await _repository.GetByIdAsync(model.CategoryId);
+        findCategory.CategoryName = model.CategoryName;
+        await _repository.UpdateAsync(findCategory);
     }
 }

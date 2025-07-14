@@ -1,8 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using Shoper.Application.Interfaces;
+using Shoper.Application.Interfaces.IProductsRepository;
 using Shoper.Application.Usecasess.CategoryServices;
+using Shoper.Application.Usecasess.ProductServices;
 using Shoper.Persistence.Context;
 using Shoper.Persistence.Repositories;
+using Shoper.Persistence.Repositories.ProductsRepository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +13,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-builder.Services.AddScoped<ICategoryServices, CategoryServices>();
+builder.Services.AddScoped<IProductsRepository, ProductsRepository>();
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<ICategoryService, CategoryServices>();
 
 builder.Services.AddControllers();
 // Add services to the container.
