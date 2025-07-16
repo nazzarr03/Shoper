@@ -10,7 +10,7 @@ public interface IFavoritesService
     Task UpdateFavoritesAsync(UpdateFavoritesDto updateFavoritesDto);
     Task DeleteFavoritesAsync(int id);
     Task<List<ResultFavoritesDto>> GetFavoritesByUserId(string userid);
-    Task<bool> CheckFavoritesByUseridAndProductId(string userid, int productid);
+    Task<bool> CheckFavoritesByUseridAndProductId(string userId, int productId);
     Task<int> GetCountByUserId(string userid);
     Task<List<AdminFavoritesDto>> GetAdminFavoritesList();
 }
