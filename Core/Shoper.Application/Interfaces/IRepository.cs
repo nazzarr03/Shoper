@@ -30,5 +30,4 @@ public interface IRepository<T> where T : class
     Task<T> FirstOrDefaultAsync(Expression<Func<T, bool>> filter);
     
     Task<List<T>> WhereAsync(Expression<Func<T, bool>> filter);
-
 }

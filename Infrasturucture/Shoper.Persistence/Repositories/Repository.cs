@@ -1,6 +1,7 @@
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using Shoper.Application.Interfaces;
+using Shoper.Domain.Entities;
 using Shoper.Persistence.Context;
 
 namespace Shoper.Persistence.Repositories;
@@ -61,4 +62,5 @@ public class Repository<T> : IRepository<T> where T : class
     {
         return await _context.Set<T>().Where(filter).ToListAsync();
     }
+
 }
