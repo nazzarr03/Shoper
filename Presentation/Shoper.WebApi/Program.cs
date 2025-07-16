@@ -10,6 +10,7 @@ using Shoper.Application.Usecasess.AccountServices;
 using Shoper.Application.Usecasess.CartItemSevices;
 using Shoper.Application.Usecasess.CartServices;
 using Shoper.Application.Usecasess.CategoryServices;
+using Shoper.Application.Usecasess.ContactServices;
 using Shoper.Application.Usecasess.OrderItemServices;
 using Shoper.Application.Usecasess.OrderServices;
 using Shoper.Application.Usecasess.ProductServices;
@@ -38,6 +39,7 @@ builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<ICartService, CartService>();
 builder.Services.AddScoped<ICartItemService, CartItemService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<IContactService, ContactService>();
 
 builder.Services.AddDbContext<AppIdentityDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
