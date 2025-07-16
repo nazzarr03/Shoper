@@ -15,9 +15,11 @@ using Shoper.Application.Usecasess.ContactServices;
 using Shoper.Application.Usecasess.CustomerServices;
 using Shoper.Application.Usecasess.EmailServices;
 using Shoper.Application.Usecasess.FavoritesServices;
+using Shoper.Application.Usecasess.HelpServices;
 using Shoper.Application.Usecasess.OrderItemServices;
 using Shoper.Application.Usecasess.OrderServices;
 using Shoper.Application.Usecasess.ProductServices;
+using Shoper.Application.Usecasess.SubscriberServices;
 using Shoper.Persistence.Context;
 using Shoper.Persistence.Context.Identity;
 using Shoper.Persistence.Repositories;
@@ -49,6 +51,8 @@ builder.Services.AddScoped<IContactService, ContactService>();
 builder.Services.AddScoped<ICustomerService, CustomerServices>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IFavoritesService, FavoritesService>();
+builder.Services.AddScoped<IHelpService, HelpService>();
+builder.Services.AddScoped<ISubscriberService, SubscriberService>();
 
 builder.Services.AddDbContext<AppIdentityDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
