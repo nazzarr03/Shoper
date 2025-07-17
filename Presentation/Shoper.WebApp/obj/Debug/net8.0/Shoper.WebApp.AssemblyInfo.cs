@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Shoper.WebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62a88321dcb070786c5a5a7b0a205b7534e2a4fb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb1d55b218e23f678a6089181ddfc1b3bb47bde7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Shoper.WebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Shoper.WebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
