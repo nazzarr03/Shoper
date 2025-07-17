@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "djgAfo8NPlo=",
+  "dgSpecHash": "dGZKmoPg0BE=",
   "success": true,
   "projectFilePath": "/home/nazar/Desktop/RiderProjects/Shoper/Presentation/Shoper.WebApi/Shoper.WebApi.csproj",
   "expectedPackageFiles": [
@@ -40,6 +40,7 @@
     "/home/nazar/.nuget/packages/microsoft.entityframeworkcore.design/8.0.10/microsoft.entityframeworkcore.design.8.0.10.nupkg.sha512",
     "/home/nazar/.nuget/packages/microsoft.entityframeworkcore.relational/8.0.10/microsoft.entityframeworkcore.relational.8.0.10.nupkg.sha512",
     "/home/nazar/.nuget/packages/microsoft.entityframeworkcore.sqlserver/8.0.10/microsoft.entityframeworkcore.sqlserver.8.0.10.nupkg.sha512",
+    "/home/nazar/.nuget/packages/microsoft.entityframeworkcore.tools/10.0.0-preview.6.25358.103/microsoft.entityframeworkcore.tools.10.0.0-preview.6.25358.103.nupkg.sha512",
     "/home/nazar/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/home/nazar/.nuget/packages/microsoft.extensions.caching.abstractions/8.0.0/microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
     "/home/nazar/.nuget/packages/microsoft.extensions.caching.memory/8.0.1/microsoft.extensions.caching.memory.8.0.1.nupkg.sha512",

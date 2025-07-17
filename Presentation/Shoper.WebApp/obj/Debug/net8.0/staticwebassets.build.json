@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "pnlIpxFSYr331f49jLd+cc2Cc9PidvhqIMscPmt+7+E=",
+  "Hash": "M+7dyVrRTXSNU53FDJxsmAE+o1uiUHt3xxlT3lGK8GI=",
   "Source": "Shoper.WebApp",
   "BasePath": "_content/Shoper.WebApp",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "/home/nazar/Desktop/RiderProjects/Shoper/Presentation/Shoper.WebApi/Shoper.WebApi.csproj",
+      "Version": 2,
+      "Source": "Shoper.WebApi",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [
     {
       "Name": "Shoper.WebApp/wwwroot",

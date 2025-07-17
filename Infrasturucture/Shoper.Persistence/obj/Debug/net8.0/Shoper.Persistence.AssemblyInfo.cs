@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Shoper.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+210c55af864780e62bc3dd1e5b3a48a141813cde")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62a88321dcb070786c5a5a7b0a205b7534e2a4fb")]
 [assembly: System.Reflection.AssemblyProductAttribute("Shoper.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Shoper.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

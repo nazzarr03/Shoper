@@ -1,27 +1,27 @@
 ﻿@using Shoper.Application.Dtos.AccountDtos
 @using Microsoft.AspNetCore.Mvc.TagHelpers
-@model Shoper.Application.Dtos.AccountDtos.ResultProfileDto
+@model ResultProfileDto
 
 <div class="row px-xl-5">
     <div class="col">
         <div class="nav nav-tabs justify-content-center border-secondary mb-4">
-            <a class="nav-item nav-link active" data-toggle="tab" href="#tab-pane-1">Bilgiler</a>
-            <a class="nav-item nav-link" data-toggle="tab" href="#tab-pane-2">Siparişler</a>
-            <a class="nav-item nav-link" data-toggle="tab" href="#tab-pane-3">Şifreyi Değiştir</a>
+            <a class="nav-item nav-link active" data-toggle="tab" href="#tab-pane-1">İnformations</a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#tab-pane-2">Orders</a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#tab-pane-3">Change Password</a>
         </div>
         <div class="tab-content">
             <div class="tab-pane fade show active" id="tab-pane-1">
                 <form action="/Account/Profile" method="post">
-                    <label for="name" style="padding-left:15px;">Ad:</label> 
+                    <label for="name" style="padding-left:15px;">Name:</label> 
                     <input type="text" id="name" name="name" value="@Model.Name" />
 
-                <label for="surname" style="padding-left:15px;">Soyad:</label> 
+                <label for="surname" style="padding-left:15px;">Surname:</label> 
                 <input type="text" id="surname" name="surname" value="@Model.Surname" />
 
                 <label for="email" style="padding-left:15px;">Email:</label> 
                 <input type="text" id="email" value="@Model.Email" readonly/>
 
-                <label for="phonenumber" style="padding-left:15px;">Telefon:</label>
+                <label for="phonenumber" style="padding-left:15px;">Phone Number:</label>
                     <input type="text" id="phonenumber" value="@Model.PhoneNumber" readonly />
 
                         <input type="submit" value="Kaydet" class="btn btn-primary px-3">
@@ -32,11 +32,11 @@
                     <table class="table table-bordered text-center mb-0">
                         <thead class="bg-secondary text-dark">
                             <tr>
-                                <th>Tarih</th>
-                                <th>Durum</th>
-                                <th>Toplam Fiyat</th>
-                                <th>Urunler</th>
-                                <th>Fatura</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Total Amount</th>
+                                <th>Products</th>
+                                <th>Invoice</th>
                             </tr>
                         </thead>
                         <tbody class="align-middle">
@@ -62,7 +62,7 @@
                             {
                                 <tr>
                                     <td class="align-middle" colspan="5">
-                                        siparis yok
+                                        Order is not found
                                     </td>
                                 </tr>
                             }
@@ -74,9 +74,9 @@
             </div>
             <div class="tab-pane fade" id="tab-pane-3">
                 <form action="/Account/ChangePassword" method="post">
-                    <label for="password" style="padding-left:15px;">Mevcut Sifre:</label> <input type="password" id="password" name="password" required />
-                    <label for="newpassword" style="padding-left:15px;">Yeni Sifre:</label> <input type="password" id="newpassword" name="newpassword" required />
-                    <label for="newpasswordconfirm" style="padding-left:15px;">Yeni Sifre Tekrar:</label> <input type="password" id="confirmnewpassword" name="confirmnewpassword" required />
+                    <label for="password" style="padding-left:15px;">Old Password:</label> <input type="password" id="password" name="password" required />
+                    <label for="newpassword" style="padding-left:15px;">New Password:</label> <input type="password" id="newpassword" name="newpassword" required />
+                    <label for="newpasswordconfirm" style="padding-left:15px;"> Again New Password:</label> <input type="password" id="confirmnewpassword" name="confirmnewpassword" required />
                     
                     <input type="submit" value="Kaydet" class="btn btn-primary px-3">
                 </form>

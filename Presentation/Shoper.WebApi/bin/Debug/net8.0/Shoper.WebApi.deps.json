@@ -12,6 +12,7 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.10",
           "Microsoft.AspNetCore.OpenApi": "8.0.10",
           "Microsoft.EntityFrameworkCore.Design": "8.0.10",
+          "Microsoft.EntityFrameworkCore.Tools": "10.0.0-preview.6.25358.103",
           "Shoper.Application": "1.0.0",
           "Shoper.Persistence": "1.0.0",
           "Swashbuckle.AspNetCore": "6.6.2"
@@ -556,6 +557,7 @@
           }
         }
       },
+      "Microsoft.EntityFrameworkCore.Tools/10.0.0-preview.6.25358.103": {},
       "Microsoft.Extensions.ApiDescription.Server/6.0.5": {},
       "Microsoft.Extensions.Caching.Abstractions/8.0.0": {
         "dependencies": {
@@ -1439,6 +1441,13 @@
       "sha512": "sha512-DvhBEk44UjWMebFKwIFDIdEsG8gzbgflWIZljDCpIkZVpId+PKs0ufzJxnTQ94InPO+pS7+wE45cRsPRt9B0Iw==",
       "path": "microsoft.entityframeworkcore.sqlserver/8.0.10",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.8.0.10.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/10.0.0-preview.6.25358.103": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9uRQsqZrQKWbue0/GakS0HqbrsRtBprkQynFBMavfBeeWRQe/nkLjNPDpsGTkdVNnuZwjKij1/7s34ln5HTdSw==",
+      "path": "microsoft.entityframeworkcore.tools/10.0.0-preview.6.25358.103",
+      "hashPath": "microsoft.entityframeworkcore.tools.10.0.0-preview.6.25358.103.nupkg.sha512"
     },
     "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
       "type": "package",
