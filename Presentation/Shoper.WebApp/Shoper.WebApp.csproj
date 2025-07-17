@@ -18,4 +18,11 @@
       <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.10" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\Core\Shoper.Application\Shoper.Application.csproj" />
+      <ProjectReference Include="..\..\Core\Shoper.Domain\Shoper.Domain.csproj" />
+      <ProjectReference Include="..\..\Infrasturucture\Shoper.Persistence\Shoper.Persistence.csproj" />
+      <ProjectReference Include="..\Shoper.WebApi\Shoper.WebApi.csproj" />
+    </ItemGroup>
+
 </Project>
