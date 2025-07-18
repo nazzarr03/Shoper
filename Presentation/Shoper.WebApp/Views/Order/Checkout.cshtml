@@ -1,0 +1,211 @@
+@using Shoper.Application.Dtos.CartDtos
+@model GetByIdCartDto
+
+<div class="container-fluid pt-5">
+    <div class="row px-xl-5">
+        <div class="col-lg-8">
+            <div class="mb-4">
+                <h4 class="font-weight-semi-bold mb-4">Order Informations</h4>
+                <div class="row">
+                    @if(Model.Customer == null)
+                    {
+                        <div class="col-md-6 form-group">
+                            <label>Name</label>
+                            <input class="form-control" type="text" placeholder="Ad" name="customerName" id="customerName" required>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Surname</label>
+                            <input class="form-control" type="text" placeholder="Soyad" name="customerSurname" id="customerSurname" required>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Email</label>
+                            <input class="form-control" type="text" placeholder="example@email.com" name="customerEmail" id="customerEmail" required>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Phone Number</label>
+                            <input class="form-control" type="text" placeholder="5XX-XXX-XXXX" name="customerPhone" id="customerPhone" required>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="col-md-6 form-group">
+                            <label>Name</label>
+                            <input class="form-control" type="text" placeholder="Ad" name="customerName" id="customerName" required value="@Model.Customer.FirstName">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Surname</label>
+                            <input class="form-control" type="text" placeholder="Soyad" name="customerSurname" id="customerSurname" required value="@Model.Customer.LastName">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Email</label>
+                            <input class="form-control" type="text" placeholder="example@email.com" name="customerEmail" id="customerEmail" required value="@Model.Customer.Email">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Phone Number</label>
+                            <input class="form-control" type="text" placeholder="5XX-XXX-XXXX" name="customerPhone" id="customerPhone" required value="@Model.Customer.PhoneNumber">
+                        </div>
+                        
+                    }
+
+                    <div class="col-md-6 form-group">
+                        <label>City</label>
+                        <select class="custom-select" id="city" name="shippingCityId">
+                            <option selected value="0">Select City</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label>Town</label>
+                        <select class="custom-select" id="town" name="shippingTownId">
+                            <option value="">Select Town</option>
+                        </select>
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <label>Address Detail</label>
+                        <input class="form-control" type="text" placeholder="..." name="shippingAdress" id="shippingAdress">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card border-secondary mb-5">
+                <div class="card-header bg-secondary border-0">
+                    <h4 class="font-weight-semi-bold m-0">Order Total</h4>
+                </div>
+                <div class="card-body">
+                    <h5 class="font-weight-medium mb-3">Products</h5>
+                    
+                    @if(Model.CartItems != null)
+                    {
+                        @foreach (var item in Model.CartItems)
+                        {
+                            <div class="d-flex justify-content-between">
+                                <p>@item.Product.ProductName x @item.Quantity</p>
+                                <p>$@item.TotalPrice</p>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="d-flex justify-content-between">
+                            <p>Products are not exists</p>
+                        </div>
+                    }
+
+                   
+                    <hr class="mt-0">
+                    <div class="d-flex justify-content-between mb-3 pt-1">
+                        <h6 class="font-weight-medium">Total Amount</h6>
+                        <h6 class="font-weight-medium">$@Model.TotalAmount</h6>
+                    </div>
+                </div>
+                <div class="card-footer border-secondary bg-transparent">
+                    <div class="d-flex justify-content-between mt-2">
+                        <h5 class="font-weight-bold">Total</h5>
+                        <h5 class="font-weight-bold">$@Model.TotalAmount</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="card border-secondary mb-5">
+                <div class="card-footer border-secondary bg-transparent">
+                        <button id="completeOrder" class="btn btn-lg btn-block btn-primary font-weight-bold my-3 py-3">Complete The Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url: '/Order/GetCity', 
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                console.log(data.data);
+                var cityDropdown = $('#city');
+                cityDropdown.empty(); 
+                cityDropdown.append('<option selected value="0">Select City</option>'); // Varsayılan seçenek
+                $.each(data.data, function (index, city) {
+                    console.log(index, city);
+                    cityDropdown.append($('<option value="'+city.cityId+'">'+city.cityname+'</option>'));
+                });
+            },
+            error: function (xhr, status, error) {
+                console.log('Error: ' + error);
+            }
+        });
+
+        $('#city').change(function () {
+            var cityId = $(this).val();
+            console.log(cityId);
+            if (cityId != "0") {
+                $.ajax({
+                    url: '/Order/GetTownByCityId?cityId='+cityId,
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        console.log(data);
+                        var townDropdown = $('#town');
+                        townDropdown.empty();
+                        townDropdown.append('<option selected value="0">Select Town</option>');
+                        $.each(data.data, function (index, town) {
+                            townDropdown.append($('<option></option>').attr('value', town.townId).text(town.townname));
+                        });
+                    },
+                    error: function (xhr, status, error) {
+                        console.log('Error: ' + error);
+                    }
+                });
+            } else {
+                $('#town').empty();
+                $('#town').append('<option selected value="0">Select Town</option>');
+            }
+        });
+
+        $('#completeOrder').click(function (e) {
+            e.preventDefault();
+
+
+            var orderData = {
+                customerName: $('#customerName').val(),
+                customerSurname: $('#customerSurname').val(),
+                customerEmail: $('#customerEmail').val(),
+                customerPhone: $('#customerPhone').val(),
+                shippingCityId: $('#city').val(),
+                shippingTownId: $('#town').val(),
+                shippingAdress: $('#shippingAdress').val(),
+                totalAmount: '@Model.TotalAmount'  // Assuming this is coming from your model
+            };
+            var cartId = @Model.CartId;
+
+            // console.log(orderData);
+            if (!orderData.customerName || !orderData.customerSurname || !orderData.customerEmail ||
+                !orderData.customerPhone || !orderData.shippingCityId || orderData.shippingCityId === "0" ||
+                !orderData.shippingTownId || !orderData.shippingAdress) {
+                toastr.error('Fill In All Fields');
+                return;
+            }
+
+
+
+            $.ajax({
+                type: 'POST',
+                url: '/Order/CreateOrder',  
+                data: {dto:orderData,cartId:cartId
+            },
+                dataType: 'json',
+                success: function (response) {
+                console.log(response);
+                    alert('Success!');
+                    window.location.href = '@Url.Action("Index", "Home")';
+                },
+                error: function (response) {
+                    alert('Error');
+                }
+            });
+        });
+    });
+</script>
